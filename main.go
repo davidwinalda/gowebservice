@@ -15,10 +15,10 @@ func main() {
 	config.ConnectDatabase()
 
 	r.GET("/students", controllers.GetStudents)
-	// r.GET("/student/:id", controllers.GetStudentById)
-	// r.POST("/student", controllers.CreateStudent)
-	// r.PUT("/student/:id", controllers.UpdateStudentById)
-	// r.DELETE("/student/:id", controllers.DeleteStudentById)
+	r.GET("/student/:id", controllers.GetStudentById)
+	r.POST("/student", controllers.CreateStudent)
+	r.PUT("/student/:id", controllers.UpdateStudentById)
+	r.DELETE("/student/:id", controllers.DeleteStudentById)
 
 	r.Run()
 }
